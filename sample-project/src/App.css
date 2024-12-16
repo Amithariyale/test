@@ -1,0 +1,43 @@
+.card {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  border: 2px solid black;
+}
+
+.card-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-body,
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  /* Add styles here */
+  background-color: gray;
+  backface-visibility: hidden;
+}
+
+/* .card-front:hover {
+ba
+}
+
+.card-back:hover {
+  z-index: 0;
+  
+} */
